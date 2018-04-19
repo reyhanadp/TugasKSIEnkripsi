@@ -62,14 +62,24 @@ public class FrameKaisar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         fieldPlainText = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
         fieldKunci = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         btnProses = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         fieldChiper = new javax.swing.JTextArea();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        fieldChiperDekripsi = new javax.swing.JTextField();
+        fieldKunciDekripsi = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        btnProsesDekripsi = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        fieldPlaintextDekripsi = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -78,9 +88,11 @@ public class FrameKaisar extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Plaintext");
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Enkripsi"));
 
         jLabel2.setText("Kunci");
+
+        jLabel1.setText("Plaintext");
 
         fieldKunci.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -102,47 +114,127 @@ public class FrameKaisar extends javax.swing.JFrame {
         fieldChiper.setRows(5);
         jScrollPane1.setViewportView(fieldChiper);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnProses, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2))
-                        .addGap(27, 27, 27)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(fieldKunci, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(fieldPlainText))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3))
+                .addGap(9, 9, 9)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(fieldKunci, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(fieldPlainText, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnProses, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1))
+                        .addContainerGap())))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(fieldPlainText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(fieldKunci, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(5, 5, 5)
                 .addComponent(btnProses)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Dekripsi"));
+
+        jLabel7.setText("Kunci");
+
+        jLabel8.setText("Chipertext");
+
+        fieldKunciDekripsi.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                fieldKunciDekripsiKeyTyped(evt);
+            }
+        });
+
+        jLabel9.setText("Plaintext");
+
+        btnProsesDekripsi.setText("Proses");
+        btnProsesDekripsi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProsesDekripsiActionPerformed(evt);
+            }
+        });
+
+        fieldPlaintextDekripsi.setColumns(20);
+        fieldPlaintextDekripsi.setLineWrap(true);
+        fieldPlaintextDekripsi.setRows(5);
+        jScrollPane3.setViewportView(fieldPlaintextDekripsi);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel9))
+                .addGap(9, 9, 9)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(fieldKunciDekripsi, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(fieldChiperDekripsi, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnProsesDekripsi, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 319, Short.MAX_VALUE))
+                        .addContainerGap())))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(fieldChiperDekripsi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(fieldKunciDekripsi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(5, 5, 5)
+                .addComponent(btnProsesDekripsi)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -229,18 +321,19 @@ public class FrameKaisar extends javax.swing.JFrame {
             
         }
         fieldChiper.setText(chipertext.toUpperCase());
+        fieldChiperDekripsi.setText(chipertext.toUpperCase());
 //        fieldChiper.setText(vector.get(0)+" "+vector.get(1)+" "+vector.get(2)+" "+vector.get(3));
     }//GEN-LAST:event_btnProsesActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         // TODO add your handling code here:
-        this.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        int pilih = JOptionPane.showConfirmDialog(null, "Apakah Anda yakin ingin keluar ?", "Konfirmasi", JOptionPane.YES_NO_OPTION);
-        if (pilih == JOptionPane.YES_OPTION) {
-            FrameHome frameHome = new FrameHome();
-            frameHome.setVisible(true);
-            this.dispose();
-        }
+//        this.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+//        int pilih = JOptionPane.showConfirmDialog(null, "Apakah Anda yakin ingin keluar ?", "Konfirmasi", JOptionPane.YES_NO_OPTION);
+//        if (pilih == JOptionPane.YES_OPTION) {
+//            FrameHome frameHome = new FrameHome();
+//            frameHome.setVisible(true);
+//            this.dispose();
+//        }
     }//GEN-LAST:event_formWindowClosing
 
     private void fieldKunciKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fieldKunciKeyTyped
@@ -254,6 +347,89 @@ public class FrameKaisar extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_fieldKunciKeyTyped
+
+    private void fieldKunciDekripsiKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fieldKunciDekripsiKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldKunciDekripsiKeyTyped
+
+    private void btnProsesDekripsiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProsesDekripsiActionPerformed
+        // TODO add your handling code here:
+        Vector vector = new Vector();
+        int index = 0;
+        int kunci_index = 0;
+        String plaintext = "";
+        String chipertext = fieldChiperDekripsi.getText();
+        int key = Integer.parseInt(fieldKunciDekripsi.getText());
+        String[] temp = chipertext.toLowerCase().split("");
+        
+        for (int i = 0; i < temp.length; i++) {
+            if (temp[i].compareTo(" ") != 0) {
+
+                if ("a".equals(temp[i])) {
+                    index = 0;
+                } else if ("b".equals(temp[i])) {
+                    index = 1;
+                } else if ("c".equals(temp[i])) {
+                    index = 2;
+                } else if ("d".equals(temp[i])) {
+                    index = 3;
+                } else if ("e".equals(temp[i])) {
+                    index = 4;
+                } else if ("f".equals(temp[i])) {
+                    index = 5;
+                } else if ("g".equals(temp[i])) {
+                    index = 6;
+                } else if ("h".equals(temp[i])) {
+                    index = 7;
+                } else if ("i".equals(temp[i])) {
+                    index = 8;
+                } else if ("j".equals(temp[i])) {
+                    index = 9;
+                } else if ("k".equals(temp[i])) {
+                    index = 10;
+                } else if ("l".equals(temp[i])) {
+                    index = 11;
+                } else if ("m".equals(temp[i])) {
+                    index = 12;
+                } else if ("n".equals(temp[i])) {
+                    index = 13;
+                } else if ("o".equals(temp[i])) {
+                    index = 14;
+                } else if ("p".equals(temp[i])) {
+                    index = 15;
+                } else if ("q".equals(temp[i])) {
+                    index = 16;
+                } else if ("r".equals(temp[i])) {
+                    index = 17;
+                } else if ("s".equals(temp[i])) {
+                    index = 18;
+                } else if ("t".equals(temp[i])) {
+                    index = 19;
+                } else if ("u".equals(temp[i])) {
+                    index = 20;
+                } else if ("v".equals(temp[i])) {
+                    index = 21;
+                } else if ("w".equals(temp[i])) {
+                    index = 22;
+                } else if ("x".equals(temp[i])) {
+                    index = 23;
+                } else if ("y".equals(temp[i])) {
+                    index = 24;
+                } else if ("z".equals(temp[i])) {
+                    index = 25;
+                }
+                kunci_index = index - key;
+                if (kunci_index < 0) {
+                    kunci_index = kunci_index + 26;
+                }
+                
+                plaintext = plaintext + tabel_model.get(kunci_index);
+            }else{
+                plaintext = plaintext + " ";
+            }
+        }
+        fieldPlaintextDekripsi.setText(plaintext.toUpperCase());
+    }//GEN-LAST:event_btnProsesDekripsiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -282,13 +458,23 @@ public class FrameKaisar extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnProses;
+    private javax.swing.JButton btnProsesDekripsi;
     private javax.swing.JTextArea fieldChiper;
+    private javax.swing.JTextField fieldChiperDekripsi;
     private javax.swing.JTextField fieldKunci;
+    private javax.swing.JTextField fieldKunciDekripsi;
     private javax.swing.JTextField fieldPlainText;
+    private javax.swing.JTextArea fieldPlaintextDekripsi;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane3;
     // End of variables declaration//GEN-END:variables
 
 }
