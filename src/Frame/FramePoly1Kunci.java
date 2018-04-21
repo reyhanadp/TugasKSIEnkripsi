@@ -18,13 +18,13 @@ import javax.swing.WindowConstants;
  *
  * @author reyhanadp
  */
-public class FramePoly extends javax.swing.JFrame {
+public class FramePoly1Kunci extends javax.swing.JFrame {
     
     Vector tabel_model = new Vector();
     /**
      * Creates new form FramePoly
      */
-    public FramePoly() {
+    public FramePoly1Kunci() {
         initComponents();
         this.setLocationRelativeTo(null);
         
@@ -148,6 +148,7 @@ public class FramePoly extends javax.swing.JFrame {
         jLabel3.setText("Chipertext");
 
         fieldChipertext.setColumns(20);
+        fieldChipertext.setLineWrap(true);
         fieldChipertext.setRows(5);
         jScrollPane1.setViewportView(fieldChipertext);
 
@@ -221,6 +222,7 @@ public class FramePoly extends javax.swing.JFrame {
         jLabel18.setText("Plaintext");
 
         fieldPlaintextDekripsi.setColumns(20);
+        fieldPlaintextDekripsi.setLineWrap(true);
         fieldPlaintextDekripsi.setRows(5);
         jScrollPane6.setViewportView(fieldPlaintextDekripsi);
 
@@ -430,8 +432,8 @@ public class FramePoly extends javax.swing.JFrame {
         this.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
         int pilih = JOptionPane.showConfirmDialog(null, "Apakah Anda yakin ingin keluar ?", "Konfirmasi", JOptionPane.YES_NO_OPTION);
         if (pilih == JOptionPane.YES_OPTION) {
-            FrameHome frameHome = new FrameHome();
-            frameHome.setVisible(true);
+            FrameMenuPoly frameMenuPoly = new FrameMenuPoly();
+            frameMenuPoly.setVisible(true);
             this.dispose();
         }
     }//GEN-LAST:event_formWindowClosing
@@ -571,6 +573,10 @@ public class FramePoly extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        String chiper = fieldChipertextDekripsi.getText();
+        StringSelection stringSelection = new StringSelection(chiper);
+        Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clpbrd.setContents(stringSelection, null);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
@@ -593,7 +599,7 @@ public class FramePoly extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FramePoly().setVisible(true);
+                new FramePoly1Kunci().setVisible(true);
             }
         });
     }

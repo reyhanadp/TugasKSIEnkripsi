@@ -5,7 +5,12 @@
  */
 package Frame;
 
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.util.Vector;
+import javax.swing.JOptionPane;
+import javax.swing.WindowConstants;
 
 /**
  *
@@ -85,6 +90,11 @@ public class FramePoly2Kunci extends javax.swing.JFrame {
         fieldKunci2Dekripsi = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Enkripsi"));
 
@@ -517,10 +527,10 @@ public class FramePoly2Kunci extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-//        String chiper = fieldChipertext.getText();
-//        StringSelection stringSelection = new StringSelection(chiper);
-//        Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
-//        clpbrd.setContents(stringSelection, null);
+        String chiper = fieldChipertext.getText();
+        StringSelection stringSelection = new StringSelection(chiper);
+        Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clpbrd.setContents(stringSelection, null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void fieldKunciDekripsiKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fieldKunciDekripsiKeyTyped
@@ -746,13 +756,28 @@ public class FramePoly2Kunci extends javax.swing.JFrame {
             }
         }
         
-        fieldPlaintextDekripsi.setText(plaintext2);
+        fieldPlaintextDekripsi.setText(plaintext2.toUpperCase());
         
     }//GEN-LAST:event_btnProses2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        String chiper = fieldChipertextDekripsi.getText();
+        StringSelection stringSelection = new StringSelection(chiper);
+        Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clpbrd.setContents(stringSelection, null);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        // TODO add your handling code here:
+        this.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+        int pilih = JOptionPane.showConfirmDialog(null, "Apakah Anda yakin ingin keluar ?", "Konfirmasi", JOptionPane.YES_NO_OPTION);
+        if (pilih == JOptionPane.YES_OPTION) {
+            FrameMenuPoly frameMenuPoly = new FrameMenuPoly();
+            frameMenuPoly.setVisible(true);
+            this.dispose();
+        }
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments
@@ -791,21 +816,16 @@ public class FramePoly2Kunci extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnProses;
-    private javax.swing.JButton btnProses1;
     private javax.swing.JButton btnProses2;
     private javax.swing.JTextArea fieldChipertext;
-    private javax.swing.JTextArea fieldChipertext1;
     private javax.swing.JTextField fieldChipertextDekripsi;
     private javax.swing.JTextField fieldKunci;
-    private javax.swing.JTextField fieldKunci1;
     private javax.swing.JTextField fieldKunci2;
     private javax.swing.JTextField fieldKunci2Dekripsi;
     private javax.swing.JTextField fieldKunciDekripsi;
     private javax.swing.JTextField fieldPlaintext;
-    private javax.swing.JTextField fieldPlaintext1;
     private javax.swing.JTextArea fieldPlaintextDekripsi;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -814,17 +834,10 @@ public class FramePoly2Kunci extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }

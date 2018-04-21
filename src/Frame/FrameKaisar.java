@@ -327,13 +327,13 @@ public class FrameKaisar extends javax.swing.JFrame {
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         // TODO add your handling code here:
-//        this.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-//        int pilih = JOptionPane.showConfirmDialog(null, "Apakah Anda yakin ingin keluar ?", "Konfirmasi", JOptionPane.YES_NO_OPTION);
-//        if (pilih == JOptionPane.YES_OPTION) {
-//            FrameHome frameHome = new FrameHome();
-//            frameHome.setVisible(true);
-//            this.dispose();
-//        }
+        this.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+        int pilih = JOptionPane.showConfirmDialog(null, "Apakah Anda yakin ingin keluar ?", "Konfirmasi", JOptionPane.YES_NO_OPTION);
+        if (pilih == JOptionPane.YES_OPTION) {
+            FrameHome frameHome = new FrameHome();
+            frameHome.setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_formWindowClosing
 
     private void fieldKunciKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fieldKunciKeyTyped
